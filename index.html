@@ -502,6 +502,10 @@
 
         .project-links {
             margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
 
         .project-links a {
@@ -798,24 +802,27 @@
                     </div>
                 </div>
 
-                <!-- Project 2: RAG PDF Chat -->
+                <!-- Project 2: RAG Chatbot (Claude API + LangChain + Gradio) -->
                 <div class="project-detail-card">
                     <div class="project-header">
-                        <h3 class="project-title">RAG PDF Chat</h3>
+                        <h3 class="project-title">RAG Chatbot (Claude API + LangChain + Gradio)</h3>
 
                     </div>
                     <div class="project-description">
-                        A Retrieval-Augmented Generation (RAG) system that enables intelligent question-answering over
-                        PDF documents by combining vector search with large language models for accurate, context-aware
-                        responses.
+                        A Retrieval-Augmented Generation (RAG) chatbot that enables interactive question-answering over
+                        PDF documents using a local document ingestion, embedding, and FAISS-based vector retrieval
+                        pipeline, with a configurable LLM backend supporting Claude API and external providers. The
+                        system combines vector search with LLM reasoning and provides both a modern web interface and
+                        CLI support.
                     </div>
                     <div class="tech-stack">
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">LangChain</span>
-                        <span class="tech-tag">LangGraph</span>
-                        <span class="tech-tag">FAISS / Vector Database</span>
+                        <span class="tech-tag">FAISS</span>
+                        <span class="tech-tag">Claude API</span>
+                        <span class="tech-tag">Gradio</span>
                         <span class="tech-tag">Hugging Face Transformers</span>
-                        <span class="tech-tag">FastAPI / Flask</span>
+                        <span class="tech-tag">Docker / Docker Compose</span>
                     </div>
                     <button class="toggle-features-btn" onclick="toggleFeatures(this)">
                         <span>Show Key Features</span>
@@ -824,17 +831,24 @@
                     <div class="features-container">
                         <h4 class="key-features-title">Key Features</h4>
                         <ul class="features-list">
-                            <li>PDF ingestion, parsing, and intelligent text chunking</li>
-                            <li>Embedding generation and semantic similarity search</li>
-                            <li>Context-aware question answering using RAG pipelines</li>
-                            <li>Efficient vector-based document retrieval</li>
-                            <li>Modular pipeline design for scalable document querying</li>
-                            <li>Reliable grounding of LLM responses in source documents</li>
+                            <li>End-to-end RAG pipeline (PDF ingestion → embedding → retrieval → generation)</li>
+                            <li>Local document processing and vector storage for private, efficient retrieval</li>
+                            <li>Pluggable LLM backend supporting Claude API and other external providers</li>
+                            <li>Vector-based semantic search with FAISS and persistent on-disk indexing</li>
+                            <li>Interactive Gradio web UI for chatting with documents and managing the knowledge base
+                            </li>
+                            <li>Command-line interface (CLI) for ingestion, querying, and automation workflows</li>
+                            <li>Dockerized deployment for reproducible, platform-independent execution</li>
+                            <li>Smart PDF deduplication using metadata to prevent redundant processing</li>
+                            <li>Modular and configurable architecture designed for extensibility and scalability</li>
                         </ul>
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/moedk2204/RAG_PDF_CHAT" target="_blank">
                             code <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://huggingface.co/spaces/MD2204/RAG_chatPDF" target="_blank">
+                            demo <i class="fas fa-external-link-alt"></i>
                         </a>
                     </div>
                 </div>
@@ -984,7 +998,7 @@
                         Real production website designed, containerized, and deployed using Docker.
                     </p>
                     <div style="margin-top:15px;">
-                        
+
                         <a href="https://carredor.org" target="_blank"
                             style="display:inline-flex; align-items:center; gap:8px;">
                             <i class="fas fa-external-link-alt"></i> Live Website
