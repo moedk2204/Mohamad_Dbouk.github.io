@@ -1400,7 +1400,7 @@
                 <a href="https://github.com/moedk2204" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/mohamad-dbouk/" target="_blank"><i class="fab fa-linkedin"></i></a>
             </div>
-            <p>&copy; 2025 AI Engineer Portfolio. Built with passion for artificial intelligence.</p>
+            <p>&copy; 2026 AI Engineer Portfolio. Built with passion for artificial intelligence.</p>
         </div>
     </footer>
 
@@ -1444,7 +1444,7 @@
                 chatHistory.push({ role: "user", content: message });
 
                 try {
-                    // CHANGE TO Render URL HERE (e.g., https://your-backend.onrender.com/api/chat)
+                    
                     const response = await fetch('https://portfolio-backend-0mul.onrender.com/api/chat', {
                         method: 'POST',
                         headers: {
@@ -1452,7 +1452,7 @@
                         },
                         body: JSON.stringify({
                             message: message,
-                            history: chatHistory.slice(-10) // Send last 10 messages for context
+                            history: chatHistory.slice(-10) 
                         })
                     });
 
